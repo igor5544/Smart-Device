@@ -1,0 +1,13 @@
+.main-btn {
+  @include main-btn;
+
+  &--reverse {
+    border-color: $border-color--decor;
+    background-color: $bg-color--decor;
+  }
+
+  &--reverse:hover {
+    border-color: $border-color--light;
+    background-color: transparent;
+  }
+}

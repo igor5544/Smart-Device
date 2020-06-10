@@ -1,0 +1,34 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin main-btn {
+  transition: all 0.3s;
+  display: block;
+  max-width: 180px;
+  width: 100%;
+  padding: 14px 13px 13px;
+  border: 1px solid $border-color--light;
+  border-radius: 5px;
+  font-family: $additional-font;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: $text-color--light;
+  text-decoration: none;
+  letter-spacing: 1px;
+
+  &:hover {
+    border-color: $border-color--decor;
+    background-color: $bg-color--decor;
+    color: $text-color--light;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
