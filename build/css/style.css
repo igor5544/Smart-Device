@@ -521,6 +521,8 @@ img {
   height: 52px; }
 
 .header__toggle-btn {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   position: relative;
   min-width: 60px;
   height: 53px;
@@ -528,6 +530,7 @@ img {
   border: none;
   margin-left: auto;
   margin-top: 2px;
+  cursor: pointer;
   background-color: transparent; }
   .header__toggle-btn::before, .header__toggle-btn::after {
     position: absolute;
@@ -541,11 +544,16 @@ img {
   .header__toggle-btn::before {
     top: 19px; }
   .header__toggle-btn::after {
-    bottom: 17px; }
+    bottom: 19px; }
   .header__toggle-btn--nojs {
     display: none; }
+  .header__toggle-btn:hover {
+    opacity: 0.8; }
+  .header__toggle-btn:active {
+    opacity: 0.6; }
 
 .header__btn {
+  min-width: 180px;
   margin-top: 5px; }
 
 .header__contacts {
