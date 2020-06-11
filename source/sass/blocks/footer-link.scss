@@ -1,0 +1,18 @@
+.footer-link {
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  line-height: 25px;
+  text-decoration: none;
+  color: $text-color--medium;
+
+  &:hover,
+  &:focus {
+    color: $text-color--decor;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

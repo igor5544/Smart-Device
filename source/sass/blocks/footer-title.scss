@@ -1,0 +1,25 @@
+.footer-title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $text-color--dark;
+  font-family: $additional-font;
+}
+
+@media (max-width: $tablet-width) {
+  .footer-title {
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer-title {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin-bottom: 0;
+  }
+}

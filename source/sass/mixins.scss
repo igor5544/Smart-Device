@@ -10,7 +10,7 @@
   max-width: 180px;
   width: 100%;
   padding: 14px 13px 13px;
-  border: 1px solid $border-color--light;
+  border: 1px solid $border-color--lighten;
   border-radius: 5px;
   font-family: $additional-font;
   font-weight: 700;
@@ -31,4 +31,28 @@
   &:active {
     opacity: 0.8;
   }
+}
+
+@mixin container-reset {
+  max-width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@mixin container-tablet {
+  max-width: $tablet-continer-width;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin container-mobile {
+  max-width: $mobile-continer-width;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }

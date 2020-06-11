@@ -1,0 +1,147 @@
+.footer-main {
+  padding-top: 64px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid $border-color--light;
+}
+
+.footer-main__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-main__icons-wrapper {
+  margin-right: 40px;
+}
+
+.footer-main__social {
+  max-width: 350px;
+}
+
+.footer-main__links-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 990px;
+  width: 100%;
+}
+
+.footer-main__nav-inner {
+  display: flex;
+  margin-right: 40px;
+}
+
+.footer-main__nav-left {
+  margin-right: 73px;
+}
+
+.footer-main__logo {
+  display: block;
+  margin-bottom: 43px;
+}
+
+.footer-main__logo-ico {
+  width: 216px;
+  height: 52px;
+}
+
+.footer-main__copyright {
+  display: none;
+}
+
+@media (max-width: $tablet-width) {
+  .footer-main {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-main__wrapper {
+    @include container-reset;
+    display: block;
+  }
+
+  .footer-main__icons-wrapper {
+    margin-right: 0;
+    border-bottom: 1px solid $border-color--light;
+  }
+
+  .footer-main__icons-inner {
+    @include container-tablet;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 18px;
+  }
+
+  .footer-main__links-wrapper {
+    @include container-tablet;
+    padding-top: 35px;
+    padding-bottom: 37px;
+  }
+
+  .footer-main__social {
+    max-width: 200px;
+    margin-top: 10px;
+  }
+
+  .footer-main__nav-inner {
+    display: block;
+  }
+
+  .footer-main__nav-left {
+    margin-right: 0;
+  }
+
+  .footer-main__contacts-wrapper {
+    max-width: 346px;
+    width: 100%;
+  }
+
+  .footer-main__logo {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  .footer-main__copyright {
+    display: block;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .footer-main__icons-inner {
+    @include container-mobile;
+    flex-direction: column;
+    padding-top: 46px;
+    padding-bottom: 50px;
+  }
+
+  .footer-main__links-wrapper {
+    @include container-reset;
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-main__contacts-wrapper {
+    max-width: 100%;
+  }
+
+  .footer-main__nav-inner {
+    margin-right: 0;
+  }
+
+  .footer-main__logo {
+    margin-bottom: 21px;
+    margin-right: 0;
+  }
+
+  .footer-main__copyright {
+    max-width: 100%;
+    margin-bottom: 27px;
+  }
+
+  .footer-main__social {
+    max-width: 100%;
+    margin-top: 0;
+  }
+}
