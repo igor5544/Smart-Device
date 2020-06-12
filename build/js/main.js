@@ -40,7 +40,13 @@
 
       acordionContentsElements[i].classList.toggle('accordion__content--active');
       acordionBtn.classList.toggle('accordion__title--active');
-    })
+    });
   });
+
+})();
+
+(function () {
+
+  objectFitImages();
 
 })();

@@ -44,3 +44,9 @@
   });
 
 })();
+
+(function () {
+
+  objectFitImages();
+
+})();
