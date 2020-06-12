@@ -1,0 +1,15 @@
+.features {
+  padding-top: 110px;
+}
+
+@media (max-width: $tablet-width) {
+  .features {
+    padding-top: 54px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .features {
+    padding-top: 37px;
+  }
+}

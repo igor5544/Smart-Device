@@ -13,7 +13,6 @@
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
   .main-block {
-    min-height: 873px;
     background-image: url("../img/main-bg--desktop@2x.jpg");
   }
 }
@@ -120,12 +119,12 @@
 
 .main-block__lmg {
   position: absolute;
-  left: 22px;
+  left: 27px;
   width: 705px;
   height: 515px;
   object-fit: contain;
   font-family: "object-fit: contain;";
-  transform: translateY(-44%);
+  transform: translateY(-45%);
 }
 
 @media (max-width: $tablet-width) {

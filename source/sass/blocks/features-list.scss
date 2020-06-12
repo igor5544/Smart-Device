@@ -1,0 +1,36 @@
+.features-list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features-list__item {
+  flex-basis: 48.7%;
+  margin-right: 2.6%;
+  margin-bottom: 2.6%;
+
+  &:nth-of-type(2n),
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .features-list__item {
+    flex-basis: 48%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .features-list {
+    display: block;
+  }
+
+  .features-list__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
