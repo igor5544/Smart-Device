@@ -15,6 +15,8 @@
 @media (max-width: $tablet-width) {
   .section-wrapper {
     background-image: url("../img/info-bg--tablet@1x.png");
+    background-position: 0% 164%;
+    background-size: contain;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -27,6 +29,7 @@
 @media (max-width: $mobile-width) {
   .section-wrapper {
     background-image: url("../img/info-bg--mobile@1x.png");
+    background-position: 0% 70.5%;
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

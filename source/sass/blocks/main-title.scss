@@ -1,0 +1,21 @@
+.main-title {
+  margin: 0;
+  font-family: $additional-font;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+}
+
+@media (max-width: $tablet-width) {
+  .main-title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main-title {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}

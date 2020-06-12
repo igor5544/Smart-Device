@@ -70,6 +70,10 @@
   transition: all 0.3s;
 }
 
+.advantagee br {
+  display: none;
+}
+
 @media (max-width: $tablet-width) {
   .advantage svg {
     width: 32px;
@@ -110,5 +114,9 @@
   .advantage h3 {
     font-size: 20px;
     line-height: 28px;
+  }
+
+  .advantagee br {
+    display: block;
   }
 }

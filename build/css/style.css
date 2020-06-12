@@ -420,12 +420,26 @@ img {
     color: #ffffff; }
   .main-btn:active {
     opacity: 0.6; }
-  .main-btn--reverse {
+  .main-btn--light-bg {
     border-color: #00b2ff;
-    background-color: #00b2ff; }
-  .main-btn--reverse:hover {
-    border-color: #ffffff;
-    background-color: transparent; }
+    color: #00b2ff; }
+
+.main-title {
+  margin: 0;
+  font-family: "RobotoCondensed", "Tahoma", sans-serif;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400; }
+
+@media (max-width: 1023px) {
+  .main-title {
+    font-size: 32px;
+    line-height: 45px; } }
+
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 28px;
+    line-height: 39px; } }
 
 .main-contacts {
   margin: 0;
@@ -989,6 +1003,79 @@ img {
   .advantage h3 {
     font-size: 20px;
     line-height: 28px; } }
+
+.info {
+  padding-top: 74px;
+  padding-bottom: 98px; }
+
+.info__wrapper {
+  position: relative;
+  min-height: 313px;
+  padding-right: 27px;
+  padding-left: 205px; }
+  .info__wrapper::before {
+    position: absolute;
+    content: "";
+    left: 26px;
+    top: 10px;
+    width: 121px;
+    height: 313px;
+    background-image: url("../img/number--desktop@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .info__wrapper::before {
+    background-image: url("../img/number--desktop@2x.png"); } }
+
+.info__title {
+  margin-bottom: 23px; }
+
+.info__text {
+  margin-top: 0;
+  margin-bottom: 23px; }
+  .info__text:last-of-type {
+    margin-bottom: 41px; }
+  .info__text--tablet {
+    display: none; }
+
+@media (max-width: 1023px) {
+  .info {
+    padding-top: 26px; }
+  .info__wrapper {
+    min-height: 362px;
+    padding-left: 210px;
+    padding-right: 20px; }
+    .info__wrapper::before {
+      width: 132px;
+      height: 362px;
+      top: 0;
+      background-image: url("../img/number--tablet@1x.png"); } }
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .info__wrapper::before {
+    background-image: url("../img/number--tablet@2x.png"); } }
+
+@media (max-width: 1023px) {
+  .info__title {
+    margin-bottom: 25px; }
+  .info__text {
+    padding-left: 3px;
+    margin-bottom: 18px; }
+    .info__text.info__text:last-of-type {
+      margin-bottom: 43px; }
+  .info__text--desktop {
+    display: none; }
+  .info__text--tablet {
+    display: inline;
+    padding-left: 0; }
+  .info__btn {
+    margin-left: 3px; } }
+
+@media (max-width: 767px) {
+  .info__wrapper::before {
+    display: none; } }
 
 .footer {
   background-color: #fafafa; }
