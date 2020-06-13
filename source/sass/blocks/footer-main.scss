@@ -68,8 +68,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 18px;
+    padding: 19px 25px 20px;
   }
 
   .footer-main__links-wrapper {
@@ -80,7 +79,6 @@
 
   .footer-main__social {
     max-width: 200px;
-    margin-top: 10px;
   }
 
   .footer-main__nav-inner {
@@ -112,7 +110,7 @@
     @include container-mobile;
     flex-direction: column;
     padding-top: 46px;
-    padding-bottom: 50px;
+    padding-bottom: 44px;
   }
 
   .footer-main__links-wrapper {

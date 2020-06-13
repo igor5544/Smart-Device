@@ -1,0 +1,164 @@
+.form__row-wrapper {
+  display: flex;
+}
+
+.form__row-wrapper input:not(:last-of-type) {
+  margin-right: 31px;
+}
+
+.form__row-wrapper button {
+  align-self: flex-start;
+  margin-right: 38px;
+}
+
+.form input:focus,
+.form button:focus,
+.form textarea:focus,
+.form input[type="checkbox"]:focus + label::before {
+  outline: none;
+  box-shadow: 0 0 0 2px $focus-color--light;
+}
+
+.form input:not([type="checkbox"]),
+.form textarea {
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  margin-bottom: 43px;
+  padding: 14px 16px;
+  border-radius: 0;
+  border: none;
+  color: $text-color--light;
+  background-color: $bg-color--decor-light;
+
+  &:hover {
+    background-color: $bg-color--hover;
+  }
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: $text-color--light;
+  opacity: 1;
+}
+
+.form textarea {
+  height: 154px;
+  margin-bottom: 45px;
+  resize: none;
+}
+
+.form input[type="checkbox"] + label {
+  transition: all 0.3s;
+  position: relative;
+  display: block;
+  padding-left: 31px;
+  margin-top: 9px;
+  font-size: 14px;
+  line-height: 16px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $border-color--lighten;
+  }
+
+  &::after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 7px;
+    border: 1px solid $border-color--lighten;
+    border-left: none;
+    border-top: none;
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+}
+
+.form input[type="checkbox"] {
+  @include visually-hidden;
+
+  &:checked + label::after {
+    opacity: 1;
+  }
+
+  &:checked + label:hover {
+    opacity: 0.8;
+  }
+
+  &:checked + label:hover::after,
+  &:checked + label:hover::before {
+    opacity: 1;
+  }
+
+  & + label:hover::after {
+    opacity: 0.5;
+  }
+}
+
+.form button {
+  @include main-btn;
+  min-width: 270px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: $bg-color--clear;
+    color: $text-color--decor;
+    border-color: $border-color--decor;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form__row-wrapper input:not(:last-of-type) {
+    margin-right: 35px;
+  }
+
+  .form input:not([type="checkbox"]),
+  .form textarea {
+    padding-bottom: 19px;
+    margin-bottom: 42px;
+  }
+
+  .form textarea {
+    height: 160px;
+    margin-bottom: 44px;
+  }
+
+  .form input[type="checkbox"] + label {
+    padding-left: 34px;
+  }
+
+  .form button {
+    min-width: 280px;
+    padding-bottom: 14px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form__row-wrapper {
+    display: block;
+  }
+
+  .form input:not([type="checkbox"]),
+  .form textarea {
+    margin-bottom: 31px;
+  }
+
+  .form textarea {
+    height: 104px;
+  }
+
+  .form button {
+    min-width: 100%;
+    margin-bottom: 31px;
+  }
+}

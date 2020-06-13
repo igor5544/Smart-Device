@@ -33,9 +33,9 @@
       var contentSelector = '.accordion__content:eq(' + i + ')';
 
       if (acordionContentsElements[i].classList.contains('accordion__content--active')) {
-        $(contentSelector).fadeOut('slow');
+        $(contentSelector).fadeOut();
       } else {
-        $(contentSelector).fadeIn('slow');
+        $(contentSelector).fadeIn();
       }
 
       acordionContentsElements[i].classList.toggle('accordion__content--active');
