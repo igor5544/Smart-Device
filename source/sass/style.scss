@@ -3,6 +3,7 @@
 @import "vars.scss";
 @import "mixins.scss";
 @import "global.scss";
+@import "libs.scss";
 @import "blocks/visually-hidden.scss";
 @import "blocks/container.scss";
 @import "blocks/logo-svg.scss";
@@ -33,3 +34,4 @@
 @import "blocks/accordion.scss";
 @import "blocks/footer-copyright.scss";
 @import "blocks/copyright-list.scss";
+@import "blocks/popup-form.scss";

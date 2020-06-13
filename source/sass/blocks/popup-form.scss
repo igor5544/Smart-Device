@@ -1,0 +1,105 @@
+.popup-form {
+  position: relative;
+  max-width: 489px;
+  width: 100%;
+  padding: 35px 39px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $bg-color--decor;
+  color: $text-color--light;
+
+  &--zoom .zoom-anim-dialog {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+  }
+
+  &--zoom.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &--zoom.mfp-removing .zoom-anim-dialog {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  &--zoom.mfp-bg {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &--zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+  }
+
+  &--zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+  }
+}
+
+.popup-form .mfp-close {
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 22px;
+    height: 1px;
+    background-color: $bg-color--clear;
+  }
+
+  &::before {
+    transform: translate(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%) rotate(-45deg);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.popup-form__title {
+  margin-top: 0;
+  margin-bottom: 11px;
+  font-family: $additional-font;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+}
+
+.popup-form__text {
+  max-width: 380px;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.popup-form__blank input:not([type="checkbox"]),
+.form textarea {
+  padding: 14px 24px 20px;
+  margin-bottom: 30px;
+}
+
+.popup-form__blank textarea {
+  height: 104px;
+  margin-bottom: 31px;
+}
+
+.popup-form__blank button {
+  max-width: 100%;
+  margin-bottom: 35px;
+}
+
+.popup-form input[type="checkbox"] + label {
+  max-width: 400px;
+  padding-left: 48px;
+}

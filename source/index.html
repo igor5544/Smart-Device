@@ -50,7 +50,7 @@
         </li>
       </ul>
 
-      <a href="#" class="header__btn main-btn">
+      <a href="#popup-form" class="header__btn main-btn">
         Заказать звонок
       </a>
     </div>
@@ -69,7 +69,7 @@
           <p class="main-block__subtitle">
             производство и монтаж, поставка комплектующих, блоков и модулей
           </p>
-          <a class="main-block__btn main-btn" href="#">
+          <a class="main-block__btn main-btn" href="#questions">
             <span class="main-block__btn-text main-block__btn-text--desktop">
               Получить бесплатную консультацию
             </span>
@@ -248,7 +248,7 @@
 
     </section>
 
-    <section class="questions">
+    <section class="questions" id="questions">
 
       <div class="questions__wrapper container">
         <div class="questions__form-wrapper">
@@ -261,7 +261,7 @@
           <form method="post" class="questions__form form">
             <div class="form__row-wrapper">
               <input type="text" name="user-name" placeholder="Имя" required>
-              <input type="tel" name="user-phone" placeholder="Телефон" required>
+              <input type="tel" name="user-phone" placeholder="Телефон" required minlength="15">
             </div>
             <textarea name="user-message" placeholder="Ваш вопрос"></textarea>
             <div class="form__row-wrapper">
@@ -434,6 +434,25 @@
     </section>
 
   </footer>
+
+  <div class="popup-form zoom-anim-dialog mfp-hide" id="popup-form">
+    <h2 class="popup-form__title">
+      Закажите звонок
+    </h2>
+    <p class="popup-form__text">
+      Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+    </p>
+    <form method="post" class="popup-form__blank form">
+      <input type="text" name="user-name" placeholder="Имя" required>
+      <input type="tel" name="user-phone" placeholder="Телефон" required>
+      <textarea name="user-message" placeholder="Ваш вопрос"></textarea>
+      <button type="submit">Отправить</button>
+      <input type="checkbox" name="user-consent" id="user-consent" required checked>
+      <label for="user-consent">
+        Я согласен на обработку персональных данных
+      </label>
+    </form>
+  </div>
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.js"></script>

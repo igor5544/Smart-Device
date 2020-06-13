@@ -42,6 +42,16 @@ gulp.task("cssDefoult", function () {
     .pipe(server.stream());
 });
 
+gulp.task("cssLibs", function () {
+  return gulp.src([
+    'node_modules/magnific-popup/dist/magnific-popup.css',
+  ])
+    .pipe(plumber())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(rename("libs.scss"))
+    .pipe(gulp.dest("source/sass"))
+});
+
 gulp.task("server", function () {
   server.init({
     server: "build/",
