@@ -1,0 +1,29 @@
+.price {
+  padding-top: 88px;
+  padding-bottom: 97px;
+  background-color: $bg-color--dark;
+}
+
+.price__title {
+  margin-bottom: 52px;
+  color: $text-color--light;
+}
+
+@media (max-width: $tablet-width) {
+  .price {
+    padding-top: 49px;
+    padding-bottom: 33px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .price {
+    padding-top: 50px;
+    padding-bottom: 34px;
+  }
+
+  .price__title {
+    margin-bottom: 42px;
+    padding-left: 10px;
+  }
+}

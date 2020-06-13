@@ -1,0 +1,34 @@
+.price-list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.price-list__item {
+  flex-basis: 31.6%;
+  margin-right: 2.6%;
+  margin-bottom: 2.6%;
+
+  &:nth-of-type(3n),
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .price-list {
+    display: block;
+  }
+
+  .price-list__item {
+    margin-right: 0;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .price-list__item {
+    margin-bottom: 30px;
+  }
+}
