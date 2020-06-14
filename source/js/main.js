@@ -22,6 +22,20 @@
 
 (function () {
 
+  var pageElement = $('html, body');
+  var SCROLL_IN_MS = 400;
+
+  $('.slow-scroll').click(function () {
+    pageElement.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, SCROLL_IN_MS);
+    return false;
+  });
+
+})();
+
+(function () {
+
   var headerElement = document.querySelector('.header');
   var toggleBtnElement = headerElement.querySelector('.header__toggle-btn');
 
@@ -30,6 +44,7 @@
 })();
 
 (function () {
+  var htmlElement = document.querySelector('html');
   var bodyElement = document.body;
   var headerElement = document.querySelector('.header');
   var formsElements = document.querySelectorAll('.form');
@@ -38,8 +53,15 @@
   var formsList = Array.prototype.slice.call(formsElements);
   var nameFieldsList = Array.prototype.slice.call(nameFieldsElements);
   var phoneFieldsList = Array.prototype.slice.call(phoneFieldsElements);
+  var popupFormElement = document.querySelector('.popup-form__blank');
+  var messageFieldInPopupElement = popupFormElement.querySelector('textarea');
+  var nameFieldInPopupElement = popupFormElement.querySelector('input[name="user-name"]');
+  var phoneFieldInPopupElement = popupFormElement.querySelector('input[type="tel"]');
+
   var PHONE_FOCUS_VALUE = '+7(';
   var PHONE_MIN_VALUE = 3;
+  var PHONE_MAX_VALUE = 15;
+  var POPUP_FOCUS_DELEY_IN_MS = 100;
 
   var isStorageSupport = true;
   var storageName;
@@ -108,26 +130,45 @@
     return scrollbarWidth;
   }
 
-  function hideScroll() {
+  function scrollIndent() {
     bodyElement.style.marginRight = scrollbarWidth() + 'px';
     headerElement.style.marginRight = scrollbarWidth() + 'px';
-    bodyElement.style.overflow = 'hidden'
+  }
+
+  function hideScroll() {
+    htmlElement.setAttribute('style', '');
+    htmlElement.classList.add('open-popup');
   }
 
   function showScroll() {
-    bodyElement.style.overflow = '';
     bodyElement.style.marginRight = 0;
     headerElement.style.marginRight = 0;
+    htmlElement.classList.remove('open-popup');
+  }
+
+  function focusField() {
+    setTimeout(function () {
+      if (storageName && storagePhone && phoneFieldInPopupElement.value.length == PHONE_MAX_VALUE) {
+        messageFieldInPopupElement.focus();
+      } else if (storageName) {
+        phoneFieldInPopupElement.focus();
+      } else {
+        nameFieldInPopupElement.focus();
+      }
+    }, POPUP_FOCUS_DELEY_IN_MS);
   }
 
   $('.header__btn').magnificPopup({
     type: 'inline',
-    fixedContentPos: false,
     closeBtnInside: true,
     mainClass: 'popup-form--zoom',
     callbacks: {
       beforeOpen: function () {
+        scrollIndent();
+      },
+      open: function () {
         hideScroll();
+        focusField();
       },
       close: function () {
         showScroll();

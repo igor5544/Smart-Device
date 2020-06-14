@@ -45,6 +45,12 @@
   }
 }
 
+@media (pointer: coarse) {
+  .service {
+    cursor: pointer;
+  }
+}
+
 .service a {
   text-decoration: none;
 }
