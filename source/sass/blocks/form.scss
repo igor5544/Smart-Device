@@ -11,6 +11,10 @@
   margin-right: 38px;
 }
 
+.form label {
+  @include visually-hidden;
+}
+
 .form input:focus,
 .form button:focus,
 .form textarea:focus,
@@ -52,10 +56,14 @@
   transition: all 0.3s;
   position: relative;
   display: block;
+  width: auto;
+  height: auto;
   padding-left: 31px;
+  margin: 0;
   margin-top: 9px;
   font-size: 14px;
   line-height: 16px;
+  overflow: inherit;
 
   &::before,
   &::after {
@@ -107,6 +115,7 @@
 
 .form button {
   @include main-btn;
+  max-width: 270px;
   min-width: 270px;
   background-color: transparent;
 
@@ -138,6 +147,7 @@
   }
 
   .form button {
+    max-width: 280px;
     min-width: 280px;
     padding-bottom: 14px;
   }
@@ -158,7 +168,7 @@
   }
 
   .form button {
-    min-width: 100%;
+    max-width: 100%;
     margin-bottom: 31px;
   }
 }

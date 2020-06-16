@@ -1,6 +1,6 @@
 .footer-main {
   padding-top: 64px;
-  padding-bottom: 45px;
+  padding-bottom: 56px;
   border-bottom: 1px solid $border-color--light;
 }
 
@@ -73,8 +73,8 @@
 
   .footer-main__links-wrapper {
     @include container-tablet;
-    padding-top: 35px;
-    padding-bottom: 37px;
+    padding-top: 38px;
+    padding-bottom: 33px;
   }
 
   .footer-main__social {
@@ -90,7 +90,7 @@
   }
 
   .footer-main__contacts-wrapper {
-    max-width: 346px;
+    max-width: 342px;
     width: 100%;
   }
 

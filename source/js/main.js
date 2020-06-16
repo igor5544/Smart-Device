@@ -263,8 +263,13 @@
   }
 
   function onAccordionBtnClick() {
+    var activeАccordionElement = footerElement.querySelector('.accordion__title--active');
     var i = accordionBtnsList.indexOf(this);
     var contentSelector = '.accordion__content:eq(' + i + ')';
+
+    if (activeАccordionElement && activeАccordionElement != this) {
+      activeАccordionElement.click();
+    }
 
     if (accordionContentsElements[i].classList.contains('accordion__content--active')) {
       $(contentSelector).fadeOut();

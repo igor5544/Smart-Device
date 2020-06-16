@@ -262,10 +262,13 @@
           </p>
           <form method="post" class="questions__form form">
             <div class="form__row-wrapper">
-              <input type="text" name="user-name" placeholder="Имя" required>
-              <input type="tel" name="user-phone" placeholder="Телефон" required minlength="15">
+              <label for="user-name">Имя</label>
+              <input type="text" id="user-name" name="user-name" placeholder="Имя" required>
+              <label for="user-phone">Телефон</label>
+              <input type="tel" id="user-phone" name="user-phone" placeholder="Телефон" required minlength="15">
             </div>
-            <textarea name="user-message" placeholder="Ваш вопрос"></textarea>
+            <label for="user-message">Ваш вопрос</label>
+            <textarea name="user-message" id="user-message" placeholder="Ваш вопрос"></textarea>
             <div class="form__row-wrapper">
               <button type="submit">Задать вопрос</button>
               <input type="checkbox" name="user-consent" id="user-consent" required checked>
@@ -301,7 +304,8 @@
             </p>
             <ul class="footer-main__social social">
               <li class="social__item">
-                <a class="social__link" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Фейсбук">
+                <a class="social__link" href="https://www.facebook.com" target="_blank" rel="noopener"
+                  aria-label="Фейсбук">
                   <svg class="social__ico social__ico--fb" width="27" height="27">
                     <use xlink:href="#icon-fb"></use>
                   </svg>
@@ -382,7 +386,8 @@
               </h3>
               <ul class="footer-main__contacts contacts accordion__content">
                 <li class="contacts__item">
-                  <a href="https://yandex.ru/maps/-/CCQdjGXV3C" target="_blank" rel="noopener" class="contacts__link footer-link">
+                  <a href="https://yandex.ru/maps/-/CCQdjGXV3C" target="_blank" rel="noopener"
+                    class="contacts__link footer-link">
                     г. Мытищи, Олимпийский проспект,&nbsp;д.10
                   </a>
                 </li>
@@ -451,9 +456,12 @@
       Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
     </p>
     <form method="post" class="popup-form__blank form">
-      <input type="text" name="user-name" placeholder="Имя" required>
-      <input type="tel" name="user-phone" placeholder="Телефон" required>
-      <textarea name="user-message" placeholder="Ваш вопрос"></textarea>
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="user-name" placeholder="Имя" required>
+      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" name="user-phone" placeholder="Телефон" required>
+      <label for="message">Ваш вопрос</label>
+      <textarea id="message" name="user-message" placeholder="Ваш вопрос"></textarea>
       <button type="submit">Отправить</button>
       <input type="checkbox" name="user-consent" id="consent" required checked>
       <label for="consent">
