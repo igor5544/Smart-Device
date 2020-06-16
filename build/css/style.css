@@ -769,7 +769,7 @@ img.mfp-img {
   overflow: hidden; }
 
 .logo-svg__img {
-  display: block; }
+  display: none; }
 
 @media (max-width: 767px) {
   .logo-svg__full {
@@ -876,7 +876,7 @@ img.mfp-img {
   .main-contacts {
     width: auto; }
   .main-contacts__item {
-    margin-left: 35px; }
+    margin-left: 32px; }
   .main-contacts__link {
     font-size: 0;
     padding: 13px 0 13px; }
@@ -971,7 +971,8 @@ img.mfp-img {
     min-width: 40px;
     height: 49px;
     padding: 13px 1px;
-    margin-top: 0; }
+    margin-top: 0;
+    margin-right: 3px; }
     .header__toggle-btn::before {
       top: 17px; }
     .header__toggle-btn::after {
@@ -1624,6 +1625,14 @@ img.mfp-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .form__row-wrapper--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
 
 .form__row-wrapper input:not(:last-of-type) {
   margin-right: 31px; }
@@ -1709,7 +1718,8 @@ img.mfp-img {
   margin-top: 9px;
   font-size: 14px;
   line-height: 16px;
-  overflow: inherit; }
+  overflow: inherit;
+  cursor: pointer; }
   .form input[type="checkbox"] + label::before, .form input[type="checkbox"] + label::after {
     content: "";
     position: absolute; }
@@ -1770,7 +1780,8 @@ img.mfp-img {
   letter-spacing: 1px;
   max-width: 270px;
   min-width: 270px;
-  background-color: transparent; }
+  background-color: transparent;
+  cursor: pointer; }
   .form button:hover {
     border-color: #00b2ff;
     background-color: #00b2ff;
@@ -1802,6 +1813,16 @@ img.mfp-img {
 @media (max-width: 767px) {
   .form__row-wrapper {
     display: block; }
+    .form__row-wrapper--reverse {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; }
+  .form input[type="checkbox"] + label {
+    margin-top: 0; }
   .form input:not([type="checkbox"]),
   .form textarea {
     margin-bottom: 31px; }
@@ -1809,6 +1830,7 @@ img.mfp-img {
     height: 104px; }
   .form button {
     max-width: 100%;
+    min-width: auto;
     margin-bottom: 31px; } }
 
 .questions {
@@ -2181,6 +2203,8 @@ img.mfp-img {
   .accordion__title--js::after {
     -webkit-transform: translateY(-50%) rotate(90deg);
             transform: translateY(-50%) rotate(90deg); }
+  .accordion__title--js:focus {
+    outline: none; }
   .accordion__title--js:hover::before, .accordion__title--js:hover::after, .accordion__title--js:focus::before, .accordion__title--js:focus::after {
     background-color: #00b2ff; }
   .accordion__title--js:active, .accordion__title--js:active {
@@ -2338,6 +2362,15 @@ img.mfp-img {
   margin-top: 0;
   margin-bottom: 32px; }
 
+.popup-form__checkbox-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse; }
+
 .popup-form__blank input:not([type="checkbox"]),
 .popup-form__blank textarea {
   padding: 14px 24px 20px;
@@ -2353,4 +2386,5 @@ img.mfp-img {
 
 .popup-form input[type="checkbox"] + label {
   max-width: 400px;
-  padding-left: 48px; }
+  padding-left: 48px;
+  margin-top: 0; }

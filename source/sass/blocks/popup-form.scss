@@ -83,6 +83,11 @@
   margin-bottom: 32px;
 }
 
+.popup-form__checkbox-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .popup-form__blank input:not([type="checkbox"]),
 .popup-form__blank textarea {
   padding: 14px 24px 20px;
@@ -102,4 +107,5 @@
 .popup-form input[type="checkbox"] + label {
   max-width: 400px;
   padding-left: 48px;
+  margin-top: 0;
 }

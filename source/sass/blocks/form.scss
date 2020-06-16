@@ -1,5 +1,10 @@
 .form__row-wrapper {
   display: flex;
+
+  &--reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
 }
 
 .form__row-wrapper input:not(:last-of-type) {
@@ -64,6 +69,7 @@
   font-size: 14px;
   line-height: 16px;
   overflow: inherit;
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -118,6 +124,7 @@
   max-width: 270px;
   min-width: 270px;
   background-color: transparent;
+  cursor: pointer;
 
   &:hover {
     background-color: $bg-color--clear;
@@ -156,6 +163,15 @@
 @media (max-width: $mobile-width) {
   .form__row-wrapper {
     display: block;
+
+    &--reverse {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .form input[type="checkbox"] + label {
+    margin-top: 0;
   }
 
   .form input:not([type="checkbox"]),
@@ -169,6 +185,7 @@
 
   .form button {
     max-width: 100%;
+    min-width: auto;
     margin-bottom: 31px;
   }
 }

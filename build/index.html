@@ -334,12 +334,12 @@
             </div>
             <label for="user-message">Ваш вопрос</label>
             <textarea name="user-message" id="user-message" placeholder="Ваш вопрос"></textarea>
-            <div class="form__row-wrapper">
-              <button type="submit">Задать вопрос</button>
+            <div class="form__row-wrapper form__row-wrapper--reverse">
               <input type="checkbox" name="user-consent" id="user-consent" required="" checked="">
               <label for="user-consent">
                 Я согласен на обработку персональных данных
               </label>
+              <button type="submit">Задать вопрос</button>
             </div>
           </form>
         </div>
@@ -525,11 +525,13 @@
       <input type="tel" id="phone" name="user-phone" placeholder="Телефон" required="">
       <label for="message">Ваш вопрос</label>
       <textarea id="message" name="user-message" placeholder="Ваш вопрос"></textarea>
-      <button type="submit">Отправить</button>
-      <input type="checkbox" name="user-consent" id="consent" required="" checked="">
-      <label for="consent">
-        Я согласен на обработку персональных данных
-      </label>
+      <div class="popup-form__checkbox-wrapper">
+        <input type="checkbox" name="user-consent" id="consent" required="" checked="">
+        <label for="consent">
+          Я согласен на обработку персональных данных
+        </label>
+        <button type="submit">Отправить</button>
+      </div>
     </form>
   </div>
 

@@ -41,9 +41,7 @@
     }
 
     &--js:hover::before,
-    &--js:hover::after,
-    &--js:focus::before,
-    &--js:focus::after {
+    &--js:hover::after {
       background-color: $bg-color--decor;
     }
 

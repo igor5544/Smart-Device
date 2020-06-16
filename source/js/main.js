@@ -214,21 +214,11 @@
 
   function onAccordion() {
     hideAllContent();
-
-    accordionBtnsList.forEach(function (accordionBtn) {
-      accordionBtn.setAttribute('tabIndex', 0);
-    });
-
     addAccordionBtnClick();
   }
 
   function offAccordion() {
     showAllContent();
-
-    accordionBtnsList.forEach(function (accordionBtn) {
-      accordionBtn.setAttribute('tabIndex', '');
-    });
-
     removeAccordionBtnClick();
   }
 
